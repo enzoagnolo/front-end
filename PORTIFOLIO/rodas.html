@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(126, 179, 29);
+        }
+        .roda{
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .pneu{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .calota{
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            background-color: rgb(207, 199, 199);
+        }
+        @keyframes girar{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</body>
+</html>
+      <div class="roda">
+      <div class="pneu"></div>
+      </div>
