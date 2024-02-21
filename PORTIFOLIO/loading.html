@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carregando</title>
+    <style>
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(255, 255, 255);
+            animation: carregar 2s infinite;
+        }
+        .carregando{
+            border: 16px solid rgb(255, 255, 255);
+            width: 100px;
+            height: 100px;
+            border-top: 16px solid black;
+            border-radius: 50%;
+        }
+        @keyframes carregar{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }     
+    </style>
+</head>
+<body>
+    <div class="carregando"></div>
+</body>
+</html>
