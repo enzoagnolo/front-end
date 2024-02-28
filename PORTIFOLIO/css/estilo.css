@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(25, 83, 25);
     padding: 0;
     font-size: 1.3em;
 }
@@ -13,9 +13,9 @@ body{
 .container{
     max-width: 640px;
     margin: 50px auto;
-    background-color: rgb(97, 228, 80);
+    background-color: rgb(57, 179, 57);
     border-radius: 20px;
-    height: 100px;
+    height: 400px;
     padding: 20px 40px 60px 80px;
     box-shadow: .3em .3em .3em .3m;
 }
@@ -29,7 +29,7 @@ form input, form label, form button{
     display: block;
     width: 100%;
     margin-bottom: 10px;
-    color: rgb(187, 255, 185);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
 }
 
@@ -41,8 +41,8 @@ form input{
 
 form button{
     border: none;
-    background-color: rgb(255, 255, 255);
-    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     height: 50px;
 }
