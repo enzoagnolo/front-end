@@ -1,12 +1,11 @@
 body{
-    background-color: rgb(0, 204, 255);
     display: grid;
-    grid-template-rows:82vh 13vh 5vh;
+    grid-template-rows: 82vh 13vh 5vh; /*define tamanho das linhas em uma coluna*/
 }
 .container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    
+    justify-content: center; /*centraliza na horizontal*/
+    align-items: center; /*centraliza na vertical*/
+    background-color: bisque;
+    gap: 10px;
 }

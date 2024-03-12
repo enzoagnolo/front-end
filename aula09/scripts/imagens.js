@@ -1,26 +1,29 @@
-let images = [];
-function carregarImage(){
-    const galeria = document .getElementById("galeria")
-    galeria.innerHTML
+let images = []; /*criando uma lista vazia para guardar as imagens */
+
+function carregarImagem(){
+    const galeria = document.getElementById("galeria");
+    galeria.innerHTML = '';
+
+    images.forEach(imgURL=>{
+        const img = document.createElement("img");
+        img.src = imgURL;
+        galeria.appendChild(img)
+    });
+
 }
 
-images.forEach(imgURL=>{
-    const img = document.createElement("img")
-    img.src = imgURL
-    galeria.appenchild(img)
-})
 
 
 document.getElementById('arquivos').addEventListener('change', function(event){
-    console.log("alterei o botão") 
-})
+    const arquivo = event.target.files[0];
+    const ler = new FileReader();
 
-    document.getElementById('arquivos').addEventListener('change', function(event){
-        const arquivos = event.target.files[0];
-        const ler = new FileReader();
-
-    ler.onload = function (e){
+    ler.onload = function(e){
         const imgURL = e.target.result;
-        images.push(imgURL)
-    }
+        images.push(imgURL);
+        carregarImagem();
+    };
+
+    ler.readAsDataURL(arquivo)
 });
+
