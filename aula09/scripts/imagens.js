@@ -12,7 +12,19 @@ function carregarImagem(){
 
 }
 
+function clicarimagem(){
+    const imageminiatura = document.querySelectorAll('#galeria img')
 
+    imageminiatura.forEach(imageminiatura=>{
+        imageminiatura.addEventListener('click', function(){
+            const imagemgrande = document.createElement('img')
+            imagemgrande.src = this.src;
+            imagemgrande.classList.add('imagem-grande');
+            document.getElementById('imagem-grande-container').innerHTML = '';
+            document.getElementById('imagem-grande-container').appendChild(imagemgrande);
+        })
+    })
+}
 
 document.getElementById('arquivos').addEventListener('change', function(event){
     const arquivo = event.target.files[0];
@@ -22,6 +34,7 @@ document.getElementById('arquivos').addEventListener('change', function(event){
         const imgURL = e.target.result;
         images.push(imgURL);
         carregarImagem();
+        clicarimagem();
     };
 
     ler.readAsDataURL(arquivo)
